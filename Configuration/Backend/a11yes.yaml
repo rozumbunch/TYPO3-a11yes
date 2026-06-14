@@ -1,0 +1,25 @@
+fontSize: true
+fontSizeStep: 2
+fontSizeMaxSteps: 5
+fontSizeMinSteps: 0
+
+letterSpacing: true
+letterSpacingStep: 1
+maxLetterSpacingSteps: 5
+minLetterSpacingSteps: 0
+
+contrast: true
+highLightColor: 'blue'
+
+fonts:
+  Open Sans: 'Open Sans, sans-serif'
+  Times New Roman: 'Times New Roman, serif'
+
+otherFunctions: true
+icons: true
+showFixedButton: false
+
+links: []
+
+
+translationsPathPattern: '../translations/{language}.json'

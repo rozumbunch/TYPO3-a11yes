@@ -1,0 +1,163 @@
+# Site Settings für Backend: Site Management → [Site] → Settings (Overview)
+
+categories:
+  a11yes:
+  a11yes.configuration:
+    parent: a11yes
+  a11yes.typography:
+    parent: a11yes
+  a11yes.contrast:
+    parent: a11yes
+  a11yes.theme:
+    parent: a11yes
+  a11yes.behavior:
+    parent: a11yes
+  a11yes.links:
+    parent: a11yes
+  a11yes.i18n:
+    parent: a11yes
+
+settings:
+  a11yes.mode:
+    category: a11yes.configuration
+    type: string
+    default: siteSettings
+    enum:
+      siteSettings: 'Site Settings'
+      typoScript: 'TypoScript constants'
+
+  a11yes.inclusionMode:
+    category: a11yes.configuration
+    type: string
+    default: libraryOnly
+    enum:
+      libraryOnly: 'Nur Frontend Bibliothek - Ohne eigene Konfiguration'
+      configurable: 'Konfigurierbare Einbindung'
+
+  a11yes.renderSiteButtonPartial:
+    category: a11yes.configuration
+    type: bool
+    default: true
+
+  a11yes.hideFixedButton:
+    category: a11yes.configuration
+    type: bool
+    default: false
+
+
+  a11yes.fontSize.enabled:
+    category: a11yes.typography
+    type: bool
+    default: true
+
+  a11yes.fontSize.step:
+    category: a11yes.typography
+    type: int
+    default: 2
+
+  a11yes.fontSize.maxSteps:
+    category: a11yes.typography
+    type: int
+    default: 5
+
+  a11yes.fontSize.minSteps:
+    category: a11yes.typography
+    type: int
+    default: 0
+
+  a11yes.letterSpacing.enabled:
+    category: a11yes.typography
+    type: bool
+    default: true
+
+  a11yes.letterSpacing.step:
+    category: a11yes.typography
+    type: int
+    default: 1
+
+  a11yes.letterSpacing.maxSteps:
+    category: a11yes.typography
+    type: int
+    default: 5
+
+  a11yes.letterSpacing.minSteps:
+    category: a11yes.typography
+    type: int
+    default: 0
+
+  a11yes.fontsJson:
+    category: a11yes.typography
+    type: text
+    default: '{"Open Sans":"Open Sans, sans-serif","Times New Roman":"Times New Roman, serif"}'
+
+  a11yes.contrast.enabled:
+    category: a11yes.contrast
+    type: bool
+    default: true
+
+  a11yes.contrast.highlightColor:
+    category: a11yes.contrast
+    type: string
+    default: blue
+    enum:
+      red: Red
+      blue: Blue
+      orange: Orange
+      black: Black
+      yellow: Yellow
+      green: Green
+
+  a11yes.theme.enabled:
+    category: a11yes.theme
+    type: bool
+    default: false
+
+  a11yes.theme.foreground:
+    category: a11yes.theme
+    type: color
+    default: '#3B1E5E'
+
+  a11yes.theme.secondaryForeground:
+    category: a11yes.theme
+    type: color
+    default: '#6B5B8A'
+
+  a11yes.theme.background:
+    category: a11yes.theme
+    type: color
+    default: '#F3EDFA'
+
+  a11yes.theme.secondaryBackground:
+    category: a11yes.theme
+    type: color
+    default: '#FFFFFF'
+
+  a11yes.theme.sectionBorder:
+    category: a11yes.theme
+    type: color
+    default: '#DCD0EC'
+
+  a11yes.theme.switchBackground:
+    category: a11yes.theme
+    type: color
+    default: '#E5DCF0'
+
+  a11yes.otherFunctions.enabled:
+    category: a11yes.behavior
+    type: bool
+    default: true
+
+  a11yes.icons.enabled:
+    category: a11yes.behavior
+    type: bool
+    default: true
+
+  a11yes.linksJson:
+    category: a11yes.links
+    type: text
+    default: '[["More information","https://www.a11yes.com/","_blank"]]'
+
+  a11yes.translationsPathPattern:
+    category: a11yes.i18n
+    type: string
+    default: '../translations/{language}.json'

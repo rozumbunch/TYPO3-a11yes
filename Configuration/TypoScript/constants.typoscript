@@ -1,0 +1,76 @@
+# A11yes constants (alter Weg / Fallback ohne Site Settings)
+plugin.tx_a11yes {
+  configuration {
+    # cat=plugin.tx_a11yes/configuration; type=string; label=Inclusion type (libraryOnly|configurable)
+    inclusionMode = libraryOnly
+    # cat=plugin.tx_a11yes/behavior; type=boolean; label=Render SiteButtonA11yes partial via page.footerData
+    renderSiteButtonPartial = 0
+    # cat=plugin.tx_a11yes/behavior; type=boolean; label=Show tools button bottom right
+    showFixedButton = 1
+  }
+  typography {
+    fontSize {
+      # cat=plugin.tx_a11yes/typography; type=boolean; label=Show font size controls
+      enabled = 1
+      # cat=plugin.tx_a11yes/typography; type=int; label=Font size: step (px)
+      step = 2
+      # cat=plugin.tx_a11yes/typography; type=int; label=Font size: maximum steps up
+      maxSteps = 5
+      # cat=plugin.tx_a11yes/typography; type=int; label=Font size: maximum steps down
+      minSteps = 0
+    }
+    letterSpacing {
+      # cat=plugin.tx_a11yes/typography; type=boolean; label=Show letter spacing controls
+      enabled = 1
+      # cat=plugin.tx_a11yes/typography; type=int; label=Letter spacing: step (px)
+      step = 1
+      # cat=plugin.tx_a11yes/typography; type=int; label=Letter spacing: maximum steps
+      maxSteps = 5
+      # cat=plugin.tx_a11yes/typography; type=int; label=Letter spacing: minimum steps
+      minSteps = 0
+    }
+    # cat=plugin.tx_a11yes/typography; type=text; label=Font families
+    fontsJson = {"Open Sans":"Open Sans, sans-serif","Times New Roman":"Times New Roman, serif"}
+  }
+
+  contrast {
+    # cat=plugin.tx_a11yes/contrast; type=boolean; label=Show contrast mode
+    enabled = 1
+    # cat=plugin.tx_a11yes/contrast; type=string; label=Highlight color
+    highlightColor = blue
+  }
+
+  theme {
+    # cat=plugin.tx_a11yes/theme; type=boolean; label=Enable A11yes theme colors
+    enabled = 0
+    # cat=plugin.tx_a11yes/theme; type=color; label=Theme foreground
+    foreground = #3B1E5E
+    # cat=plugin.tx_a11yes/theme; type=color; label=Theme secondary foreground
+    secondaryForeground = #6B5B8A
+    # cat=plugin.tx_a11yes/theme; type=color; label=Theme background
+    background = #F3EDFA
+    # cat=plugin.tx_a11yes/theme; type=color; label=Theme secondary background
+    secondaryBackground = #FFFFFF
+    # cat=plugin.tx_a11yes/theme; type=color; label=Theme section border
+    sectionBorder = #DCD0EC
+    # cat=plugin.tx_a11yes/theme; type=color; label=Theme switch background
+    switchBackground = #E5DCF0
+  }
+
+  behavior {
+    # cat=plugin.tx_a11yes/behavior; type=boolean; label=Additional helper functions
+    otherFunctions = 1
+    # cat=plugin.tx_a11yes/behavior; type=boolean; label=Use icons
+    icons = 1
+  }
+
+  links {
+    # cat=plugin.tx_a11yes/general; type=text; label=Links (JSON array)
+    linksJson = [["More information","https://www.a11yes.com/","_blank"]]
+  }
+
+  i18n {
+    # cat=plugin.tx_a11yes/i18n; type=string; label=Translation JSON path pattern
+    translationsPathPattern = ../translations/{language}.json
+  }
+}

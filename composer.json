@@ -1,0 +1,27 @@
+{
+  "name": "rozumbunch/a11yes",
+  "type": "typo3-cms-extension",
+  "description": "A11yes – Accessibility extension",
+  "keywords": ["typo3","Accessibility","Tool","a11yes"],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "authors": [
+    {
+      "name": "Rozumbunch"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^13.0 || ^14.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rozumbunch\\A11yes\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "a11yes"
+        }
+    }
+}

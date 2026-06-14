@@ -1,0 +1,16 @@
+/* Backend reset for a11yes-open so toolbar styles win. */
+.toolbar-item-link.a11yes-open {
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    height: var(--toolbar-item-link-height) !important;
+    background: var(--toolbar-item-link-bg-state, var(--toolbar-item-link-bg)) !important;
+    border: 1px solid var(--toolbar-item-link-border-color-state, var(--toolbar-item-link-border-color)) !important;
+    border-radius: var(--toolbar-item-link-border-radius) !important;
+    box-shadow: none !important;
+}
+
+/* DocHeader-Button im iframe ausblenden. */
+.module-docheader-bar .a11yes-docheader-button {
+    display: none !important;
+}

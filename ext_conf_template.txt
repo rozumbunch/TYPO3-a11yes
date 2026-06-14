@@ -1,0 +1,2 @@
+# cat=a11yes/backend/enable; type=boolean; label=LLL:EXT:a11yes/Resources/Private/Language/locallang_extconf.xlf:backendEnabled
+backendEnabled = 1

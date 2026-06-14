@@ -1,0 +1,71 @@
+page {
+    includeCSS {
+        a11yes = EXT:a11yes/Resources/Public/Contrib/a11yes.min.css
+        a11yes.media = all
+    }
+
+    includeJSFooter {
+        a11yes = EXT:a11yes/Resources/Public/JavaScript/a11yes.js
+        a11yes.type = module
+    }
+}
+
+['{$a11yes.inclusionMode}' == 'configurable' && '{$a11yes.renderSiteButtonPartial}' == '1']
+page.footerData.1721041300 = FLUIDTEMPLATE
+page.footerData.1721041300 {
+    file = EXT:a11yes/Resources/Private/Partials/SiteButtonA11yes.html
+}
+[END]
+
+['{$plugin.tx_a11yes.configuration.inclusionMode}' == 'configurable' && '{$plugin.tx_a11yes.configuration.renderSiteButtonPartial}' == '1']
+page.footerData.1721041300 = FLUIDTEMPLATE
+page.footerData.1721041300 {
+    file = EXT:a11yes/Resources/Private/Partials/SiteButtonA11yes.html
+}
+[END]
+
+
+
+
+
+plugin.tx_a11yes {
+  settings {
+
+
+    # TypoScript-Constants Mapping (alter Weg)
+    inclusionMode = {$plugin.tx_a11yes.configuration.inclusionMode}
+    renderSiteButtonPartial = {$plugin.tx_a11yes.configuration.renderSiteButtonPartial}
+    showFixedButton = {$plugin.tx_a11yes.configuration.showFixedButton}
+
+    fontSizeEnabled = {$plugin.tx_a11yes.typography.fontSize.enabled}
+    fontSizeStep = {$plugin.tx_a11yes.typography.fontSize.step}
+    fontSizeMaxSteps = {$plugin.tx_a11yes.typography.fontSize.maxSteps}
+    fontSizeMinSteps = {$plugin.tx_a11yes.typography.fontSize.minSteps}
+
+    letterSpacingEnabled = {$plugin.tx_a11yes.typography.letterSpacing.enabled}
+    letterSpacingStep = {$plugin.tx_a11yes.typography.letterSpacing.step}
+    letterSpacingMaxSteps = {$plugin.tx_a11yes.typography.letterSpacing.maxSteps}
+    letterSpacingMinSteps = {$plugin.tx_a11yes.typography.letterSpacing.minSteps}
+
+    fontsJson = {$plugin.tx_a11yes.typography.fontsJson}
+
+    contrastEnabled = {$plugin.tx_a11yes.contrast.enabled}
+    highlightColor = {$plugin.tx_a11yes.contrast.highlightColor}
+
+    themeEnabled = {$plugin.tx_a11yes.theme.enabled}
+    themeForeground = {$plugin.tx_a11yes.theme.foreground}
+    themeSecondaryForeground = {$plugin.tx_a11yes.theme.secondaryForeground}
+    themeBackground = {$plugin.tx_a11yes.theme.background}
+    themeSecondaryBackground = {$plugin.tx_a11yes.theme.secondaryBackground}
+    themeSectionBorder = {$plugin.tx_a11yes.theme.sectionBorder}
+    themeSwitchBackground = {$plugin.tx_a11yes.theme.switchBackground}
+
+    otherFunctionsEnabled = {$plugin.tx_a11yes.behavior.otherFunctions}
+    iconsEnabled = {$plugin.tx_a11yes.behavior.icons}
+    
+
+    linksJson = {$plugin.tx_a11yes.links.linksJson}
+
+    translationsPathPattern = {$plugin.tx_a11yes.i18n.translationsPathPattern}
+  }
+}

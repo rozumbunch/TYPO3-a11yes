@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:a11yes/Resources/Private/Language/locallang_extconf.xlf" date="2026-05-26T12:00:00Z" product-name="a11yes">
+		<header/>
+		<body>
+			<trans-unit id="backendEnabled">
+				<source>Enable A11yes in TYPO3 backend</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

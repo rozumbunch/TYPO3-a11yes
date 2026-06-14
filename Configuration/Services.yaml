@@ -1,0 +1,22 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Rozumbunch\A11yes\Configuration\Resolver\A11yesResolver: ~
+
+  Rozumbunch\A11yes\Configuration\BackendConfiguration: ~
+
+  Rozumbunch\A11yes\Backend\Toolbar\A11yesToolbarButtonRenderer: ~
+
+  Rozumbunch\A11yes\Backend\Toolbar\A11yesToolbarItem:
+    tags:
+      - name: backend.toolbar.item
+        identifier: 'a11yes'
+  
+  Rozumbunch\A11yes\Backend\DocHeader\A11yesDocHeaderButtonListener:
+    tags:
+      - name: event.listener
+        identifier: 'a11yes-docheader-button'
+        event: TYPO3\CMS\Backend\Template\Components\ModifyButtonBarEvent
