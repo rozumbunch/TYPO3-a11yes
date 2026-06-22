@@ -1,4 +1,20 @@
-# A11yes TYPO3 Integration
+[![TYPO3 compatibility](https://img.shields.io/badge/TYPO3-13.4-ff8700?maxAge=3600&logo=typo3)](https://get.typo3.org/)
+[![TYPO3 compatibility](https://img.shields.io/badge/TYPO3-14.0-ff8700?maxAge=3600&logo=typo3)](https://get.typo3.org/)
+
+
+# TYPO3 extension `A11yes`
+
+
+## Links
+
+|                    | URL                                                                          |
+|--------------------|------------------------------------------------------------------------------|
+| **Repository:**    | https://github.com/rozumbunch/TYPO3-a11yes                                   |
+| **Documentation:** | https://github.com/rozumbunch/TYPO3-a11yes                                   |
+| **TER:**           | https://extensions.typo3.org/extension/a11yes                                |
+| **Packagist:**     | https://packagist.org/packages/rozumbunch/a11yes                             |
+
+
 
 **Languages:** English · [Deutsch](#deutsch)
 
