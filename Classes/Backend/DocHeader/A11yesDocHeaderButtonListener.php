@@ -8,8 +8,8 @@ use Rozumbunch\A11yes\Configuration\BackendConfiguration;
 use Symfony\Component\Yaml\Yaml;
 use TYPO3\CMS\Backend\Template\Components\ButtonBar;
 use TYPO3\CMS\Backend\Template\Components\ModifyButtonBarEvent;
-use TYPO3\CMS\Core\Imaging\Icon;
 use TYPO3\CMS\Core\Imaging\IconFactory;
+use TYPO3\CMS\Core\Imaging\IconSize;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -41,7 +41,7 @@ final class A11yesDocHeaderButtonListener
         $button = $buttonBar->makeLinkButton()
             ->setTitle('Accessibility')
             ->setShowLabelText(true)
-            ->setIcon($this->iconFactory->getIcon('a11yes-toolbar', Icon::SIZE_SMALL))
+            ->setIcon($this->iconFactory->getIcon('a11yes-toolbar', IconSize::SMALL))
             ->setHref('#')
             ->setClasses('a11yes-open a11yes-docheader-button')
             ->setDataAttributes(['params' => (string)$jsonConfig]);

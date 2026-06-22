@@ -1,16 +1,50 @@
-/* Backend reset for a11yes-open so toolbar styles win. */
+/*
+ * Backend toolbar: keep markup compatible with TYPO3 toolbar-item-link
+ * (light/dark mode + mobile), undo frontend .a11yes-open button styles.
+ */
 .toolbar-item-link.a11yes-open {
-    position: static !important;
-    inset: auto !important;
-    width: auto !important;
-    height: var(--toolbar-item-link-height) !important;
-    background: var(--toolbar-item-link-bg-state, var(--toolbar-item-link-bg)) !important;
-    border: 1px solid var(--toolbar-item-link-border-color-state, var(--toolbar-item-link-border-color)) !important;
-    border-radius: var(--toolbar-item-link-border-radius) !important;
-    box-shadow: none !important;
+    position: static;
+    inset: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    width: 100%;
+    min-width: var(--toolbar-item-link-width);
+    height: var(--toolbar-item-link-height);
+    padding: 0 calc((var(--typo3-scaffold-header-item-width) - 18px) / 2);
+    color: var(--toolbar-item-link-color-state, var(--toolbar-item-link-color));
+    background-color: var(--toolbar-item-link-bg-state, var(--toolbar-item-link-bg));
+    border: 1px solid var(--toolbar-item-link-border-color-state, var(--toolbar-item-link-border-color));
+    border-radius: var(--toolbar-item-link-border-radius);
+    box-shadow: none;
+    cursor: pointer;
 }
 
-/* DocHeader-Button im iframe ausblenden. */
-.module-docheader-bar .a11yes-docheader-button {
+.toolbar-item-link.a11yes-open:hover,
+.toolbar-item-link.a11yes-open:focus,
+.toolbar-item-link.a11yes-open.active {
+    color: var(--toolbar-item-link-color-state, var(--toolbar-item-link-color));
+    background-color: var(--toolbar-item-link-bg-state, var(--toolbar-item-link-bg));
+    border-color: var(--toolbar-item-link-border-color-state, var(--toolbar-item-link-border-color));
+}
+
+.toolbar-item-link.a11yes-open .toolbar-item-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.toolbar-item-link.a11yes-open .toolbar-item-icon .icon {
+    --icon-color-primary: currentColor;
+    color: currentColor;
+}
+
+.toolbar-item-link.a11yes-open .toolbar-item-icon svg,
+.toolbar-item-link.a11yes-open .toolbar-item-icon svg path {
+    fill: currentColor;
+}
+
+/* DocHeader-Button im iframe ausblenden (TYPO3 v13/v14 Markup). */
+.module-docheader-buttons .a11yes-docheader-button,
+.module-docheader .a11yes-docheader-button {
     display: none !important;
 }

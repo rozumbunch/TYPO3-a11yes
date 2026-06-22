@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace Rozumbunch\A11yes\Backend\Toolbar;
 
 use Symfony\Component\Yaml\Yaml;
-use TYPO3\CMS\Core\Imaging\Icon;
 use TYPO3\CMS\Core\Imaging\IconFactory;
+use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
+use TYPO3\CMS\Core\Imaging\IconSize;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -31,11 +32,13 @@ final class A11yesToolbarButtonRenderer
         $jsonConfig = json_encode($config, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         $jsonConfig = htmlspecialchars((string)$jsonConfig, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
-        $iconMarkup = $this->iconFactory->getIcon('a11yes-toolbar', Icon::SIZE_SMALL)->render();
+        $iconMarkup = $this->iconFactory
+            ->getIcon('a11yes-toolbar', IconSize::SMALL)
+            ->render(SvgIconProvider::MARKUP_IDENTIFIER_INLINE);
 
         return sprintf(
-            '<button type="button" class="toolbar-item-link a11yes-open"'
-            . ' aria-label="Accessibility" data-params=\'%s\'>'
+            '<button type="button" class="toolbar-item-link t3js-topbar-button-a11yes a11yes-open"'
+            . ' title="Accessibility" aria-label="Accessibility" data-params=\'%s\'>'
             . '<span class="toolbar-item-icon" title="Accessibility">%s</span>'
             . '<span class="toolbar-item-title">Accessibility</span>'
             . '</button>',
