@@ -10,13 +10,6 @@ page {
     }
 }
 
-['{$a11yes.inclusionMode}' == 'configurable' && '{$a11yes.renderSiteButtonPartial}' == '1']
-page.footerData.1721041300 = FLUIDTEMPLATE
-page.footerData.1721041300 {
-    file = EXT:a11yes/Resources/Private/Partials/SiteButtonA11yes.html
-}
-[END]
-
 ['{$plugin.tx_a11yes.configuration.inclusionMode}' == 'configurable' && '{$plugin.tx_a11yes.configuration.renderSiteButtonPartial}' == '1']
 page.footerData.1721041300 = FLUIDTEMPLATE
 page.footerData.1721041300 {

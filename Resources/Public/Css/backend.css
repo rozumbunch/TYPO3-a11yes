@@ -1,46 +1,77 @@
 /*
- * Backend toolbar: keep markup compatible with TYPO3 toolbar-item-link
- * (light/dark mode + mobile), undo frontend .a11yes-open button styles.
+ * Backend toolbar (TYPO3 v12): match core toolbar-item-link.
+ * Scope .a11yes-open to the backend toolbar so a11yes.min.css frontend styles do not apply.
  */
-.toolbar-item-link.a11yes-open {
-    position: static;
+.scaffold-toolbar .toolbar-item-link.a11yes-open {
+    position: relative;
     inset: auto;
+    bottom: auto;
+    right: auto;
+    z-index: auto;
     display: flex;
     align-items: center;
-    gap: 0.75em;
+    justify-content: flex-start;
+    gap: 0.35em;
     width: 100%;
-    min-width: var(--toolbar-item-link-width);
-    height: var(--toolbar-item-link-height);
-    padding: 0 calc((var(--typo3-scaffold-header-item-width) - 18px) / 2);
-    color: var(--toolbar-item-link-color-state, var(--toolbar-item-link-color));
-    background-color: var(--toolbar-item-link-bg-state, var(--toolbar-item-link-bg));
-    border: 1px solid var(--toolbar-item-link-border-color-state, var(--toolbar-item-link-border-color));
-    border-radius: var(--toolbar-item-link-border-radius);
+    min-width: 0;
+    max-width: none;
+    height: 45px;
+    padding: 9px 10px;
+    line-height: 27px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(245, 245, 245, 0.7);
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     box-shadow: none;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: none;
+    appearance: none;
+    -webkit-appearance: none;
     cursor: pointer;
+    outline: 0;
 }
 
-.toolbar-item-link.a11yes-open:hover,
-.toolbar-item-link.a11yes-open:focus,
-.toolbar-item-link.a11yes-open.active {
-    color: var(--toolbar-item-link-color-state, var(--toolbar-item-link-color));
-    background-color: var(--toolbar-item-link-bg-state, var(--toolbar-item-link-bg));
-    border-color: var(--toolbar-item-link-border-color-state, var(--toolbar-item-link-border-color));
+.scaffold-toolbar .toolbar-item-link.a11yes-open:hover,
+.scaffold-toolbar .toolbar-item-link.a11yes-open:focus,
+.scaffold-toolbar .toolbar-item-link.a11yes-open.active {
+    color: #f5f5f5;
+    background: transparent;
+    background-color: transparent;
+    border: none;
 }
 
-.toolbar-item-link.a11yes-open .toolbar-item-icon {
+.scaffold-toolbar .toolbar-item-link.a11yes-open:focus-visible {
+    box-shadow: inset 0 0 0 1px #000, inset 0 0 0 2px #fff;
+}
+
+.scaffold-toolbar .toolbar-item-link.a11yes-open .toolbar-item-icon {
     display: inline-flex;
     flex-shrink: 0;
 }
 
-.toolbar-item-link.a11yes-open .toolbar-item-icon .icon {
+.scaffold-toolbar .toolbar-item-link.a11yes-open .toolbar-item-icon .icon {
     --icon-color-primary: currentColor;
     color: currentColor;
 }
 
-.toolbar-item-link.a11yes-open .toolbar-item-icon svg,
-.toolbar-item-link.a11yes-open .toolbar-item-icon svg path {
+.scaffold-toolbar .toolbar-item-link.a11yes-open .toolbar-item-icon svg,
+.scaffold-toolbar .toolbar-item-link.a11yes-open .toolbar-item-icon svg path {
     fill: currentColor;
+}
+
+.scaffold-toolbar .toolbar-item-link.a11yes-open .toolbar-item-title {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .scaffold-toolbar .toolbar-item-link.a11yes-open {
+        width: auto;
+    }
 }
 
 /* DocHeader-Button im iframe ausblenden (TYPO3 v13/v14 Markup). */
